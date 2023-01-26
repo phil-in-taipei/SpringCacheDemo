@@ -24,6 +24,6 @@ public class Employee implements Serializable {
             nullable = true,
             foreignKey = @ForeignKey
     )
-    @JsonIgnore
+    //@JsonIgnore
     private Company company;
 }

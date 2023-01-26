@@ -19,6 +19,6 @@ public class Company implements Serializable {
     private int id;
     private String name;
 
-    @OneToMany(mappedBy = "company")
-    private Collection<Employee> employees;
+    //@OneToMany(mappedBy = "company")
+    //private Collection<Employee> employees;
 }
