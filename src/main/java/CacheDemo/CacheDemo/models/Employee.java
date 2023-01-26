@@ -1,5 +1,6 @@
 package CacheDemo.CacheDemo.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
@@ -16,4 +17,13 @@ public class Employee implements Serializable {
     @GeneratedValue
     private int id;
     private String name;
+
+    @ManyToOne
+    @JoinColumn(
+            name = "companyId",
+            nullable = true,
+            foreignKey = @ForeignKey
+    )
+    @JsonIgnore
+    private Company company;
 }
